@@ -19,3 +19,5 @@ class ProfileView(viewsets.ViewSet):
     def list(self, request):
         serializer = UserSerializer(request.user)
         return Response(serializer.data)
+
+
