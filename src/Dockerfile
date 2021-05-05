@@ -19,8 +19,12 @@ RUN \
  python3 -m pip install -r requirements.txt --no-cache-dir && \
  apk --purge del .build-deps
 
+# USER postgres
+
 COPY . .
+
+EXPOSE 5432
 
 EXPOSE 8000
 
-CMD ["python3", "manage.py", "runserver", "127.0.0.1:8000"]
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]

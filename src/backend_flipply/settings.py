@@ -28,8 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.26']
-
+ALLOWED_HOSTS = ['0.0.0.0','localhost', '127.0.0.1', '192.168.0.26']
 
 # Application definition
 
@@ -79,18 +78,25 @@ WSGI_APPLICATION = 'backend_flipply.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Django_Flipply_Users',
         'USER': 'postgres',
         'PASSWORD': config('PG_PASSWORD'),
-        'HOST': '127.0.0.1',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
 
 
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'Django_Flipply_Users',
+    #     'USER': 'postgres',
+    #     'PASSWORD': config('PG_PASSWORD'),
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '5432',
+    # }
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
