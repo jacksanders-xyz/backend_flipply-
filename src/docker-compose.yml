@@ -8,12 +8,12 @@ services:
     environment:
       - POSTGRES_DB=Django_Flipply_Users
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=
+      - POSTGRES_PASSWORD=Lemon?mettalic_door_elephant
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/app
+      - .:/usr/src/app
     ports:
       - "8000:8000"
     depends_on:

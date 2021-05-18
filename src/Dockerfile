@@ -5,7 +5,7 @@ RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
 ENV PYTHONUNBUFFERED=1 \
-    PYTHONPATH=/app \
+    PYTHONPATH=/usr/src/app \
     PORT=8000 \
     WEB_CONCURRENCY=3
 
